@@ -42,6 +42,60 @@ button {
     height: 791px;
 }
 
+.image-smallstar {
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    top: 94px;
+    left: 20px;
+}
+
+.image-smallstar2 {
+
+}
+
+.image-ministar {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 60px;
+    left: 96px;
+}
+
+.image-ministar2 {
+
+}
+
+.image-line1 {
+    position: absolute;
+    right: 200px;
+    top: -50px;
+}
+
+.image-line2 {
+    position: absolute;
+    right: 160px;
+    top: 150px;
+}
+
+.image-line3{
+    position: absolute;
+    right: -35px;
+    top: 330px;
+}
+
+.image-line4 {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+}
+
+.image-form {
+    position: absolute;
+    right: 70px;
+    bottom: 200px;
+}
+
 .Fon-page__main {
     display: flex;
     flex-direction: column;
