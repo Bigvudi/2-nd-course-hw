@@ -51,7 +51,9 @@ button {
 }
 
 .image-smallstar2 {
-
+    position: absolute;
+    bottom: 149px;
+    right: 344px;
 }
 
 .image-ministar {
@@ -63,7 +65,9 @@ button {
 }
 
 .image-ministar2 {
-
+    position: absolute;
+    bottom: 255px;
+    right: 455px;
 }
 
 .image-line1 {
@@ -167,6 +171,26 @@ button {
 
 .About-games {
     background: rgba(32, 32, 39, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.smile-bigstar {
+    position: absolute;
+    top: 70px;
+    right: -140px;
+}
+
+.smile-smallstar {
+    position: absolute;
+    top: 825px;
+    left: 40px;
+}
+
+.smile-ministar {
+    position: absolute;
+    top: 770px;
+    left: 25px;
 }
 
 .mini-games {
@@ -174,6 +198,8 @@ button {
     padding-bottom: 50px;
 
 }
+
+
 
 .games-info{
     display: flex;
