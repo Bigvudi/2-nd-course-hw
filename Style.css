@@ -60,7 +60,15 @@ button {
     line-height: 141.69%;
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
+.Fon-page__link:hover {
+    background: white;
+    color: black;
+    border-color: black;
+}
+
 
 .Footer-line {
     box-sizing: border-box;
