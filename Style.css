@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat", "arial";
 }
@@ -21,6 +25,21 @@ button {
 
 .Fon-page {
     background-color: #E1FF8F;
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-bigstar {
+    position: absolute;
+    margin-top: -325px;
+    right: -365px;
+    width: 749px;
+    height: 791px;
 }
 
 .Fon-page__main {
