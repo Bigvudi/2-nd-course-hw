@@ -29,11 +29,6 @@ button {
     overflow: hidden;
 }
 
-.image {
-    position: relative;
-    overflow: hidden;
-}
-
 .image-bigstar {
     position: absolute;
     margin-top: -325px;
@@ -117,9 +112,13 @@ button {
 
 .Fon-page__subtitle {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 32px;
     padding-bottom: 48px;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .Fon-page__link {
