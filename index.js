@@ -57,3 +57,5 @@ const user = {
 };
 
 // 10HW
+const yorName = prompt("«Как тебя зовут?»");
+alert(`Привет, ${yorName}!`); // шаблонная стока
