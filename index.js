@@ -43,6 +43,15 @@ alert("остаток 9/2: " + remainder);
 
 // 7HW
 
+let num = 1;
+num += 5;
+num -= 3;
+num *= 7;
+num /= 3;
+num ++;
+num --;
+alert(num);
+
 // 8HW
 
 let age = prompt("«Сколько вам лет?»");
