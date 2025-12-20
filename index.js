@@ -16,3 +16,14 @@ const creator = ("именя создателя языка JavaScript - Brendan 
 alert(creator);
 
 // 4HW
+
+let b = 10;
+let c = 2;
+let sum = b+c;
+let difference = b-c;
+let multiplication = b*c;
+let division = b/c;
+alert("Сумма: " + sum);
+alert("Разность: " + difference);
+alert("Произведение: " + multiplication);
+alert("Частное: " + division);
