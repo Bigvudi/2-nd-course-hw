@@ -12,7 +12,7 @@ alert(year);
 
 // 3HW
 
-const creator = ("именя создателя языка JavaScript - Brendan Eich");
+const creator = ("имя создателя языка JavaScript - Brendan Eich");
 alert(creator);
 
 // 4HW
@@ -40,4 +40,14 @@ let y=9;
 let z=2;
 let remainder = 9%2;
 alert("остаток 9/2: " + remainder);
+
+// 7HW
+
+// 8HW
+
+let age = prompt("«Сколько вам лет?»");
+alert(age);
+
+// 9HW
+
 
