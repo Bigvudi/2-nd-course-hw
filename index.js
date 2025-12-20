@@ -50,4 +50,10 @@ alert(age);
 
 // 9HW
 
+const user = {
+    name: "Vasya",
+    age: 25,
+    isAdmin: false
+};
 
+// 10HW
