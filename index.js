@@ -7,5 +7,6 @@ alert(a);
 
 // 2HW
 
-
+let year = ("Год выпуска первого IPhone 2007");
+alert(year);
 
