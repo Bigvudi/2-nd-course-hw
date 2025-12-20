@@ -33,3 +33,11 @@ alert("Частное: " + division);
 let x = 2;
 let result = 2**5;
 alert("2 в 5 степени: " + result);
+
+// 6HW
+
+let y=9;
+let z=2;
+let remainder = 9%2;
+alert("остаток 9/2: " + remainder);
+
