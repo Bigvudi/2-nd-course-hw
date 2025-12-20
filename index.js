@@ -27,3 +27,9 @@ alert("Сумма: " + sum);
 alert("Разность: " + difference);
 alert("Произведение: " + multiplication);
 alert("Частное: " + division);
+
+// 5HW
+
+let x = 2;
+let result = 2**5;
+alert("2 в 5 степени: " + result);
