@@ -539,5 +539,7 @@ button {
 }
 
 @media (max-width: 767px){
-    
+    .About-games {
+        display: none;
+    }
 }
