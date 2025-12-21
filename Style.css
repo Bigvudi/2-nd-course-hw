@@ -37,6 +37,10 @@ button {
     height: 791px;
 }
 
+.image-mobile {
+    display: none;
+}
+
 .image-smallstar {
     position: absolute;
     width: 57px;
@@ -147,6 +151,7 @@ button {
 
 
 .Footer-line {
+    width: 100%;
     box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(50px);
@@ -156,16 +161,25 @@ button {
 
 .Footer-list {
     display: flex;
+    width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    white-space: nowrap;
     gap: 51px;
     height: 90px;
+    list-style: none;
+    padding: 0;
 }
 
-.Foter-list-item {
+.Footer-list-item {
     font-size: 30px;
     font-weight: 700;
     line-height: 110%;
+    flex-shrink: 0;
+}
+
+.Footer-list-element {
+    flex-shrink: 0;
 }
 
 .About-games {
@@ -538,8 +552,183 @@ button {
     text-align: center;
 }
 
-@media (max-width: 767px){
+@media (hover: none) {
+    .Fon-page__link:hover {
+        background: black;
+        border: 1px solid black;
+        color: white; 
+    }
+}
+
+@media (min-width: 768px) and (max-width:1024px){
+    .image-line1, .image-line2, 
+    .image-line3, .image-line4,
+    .image-form {
+        display: none;
+    }
+
+    .image-bigstar {
+        margin-top: -325px;
+        right: -206px;
+        width: 500px;
+        height: 550px;
+        top: 80px;
+    }
+
+    .image-ministar2 {
+        bottom: 200px;
+        right: 150px;
+    }
+
+    .image-smallstar2 {
+        bottom: 130px;
+        right: 75px;
+        width: 57px;
+    }
+
+    .Fon-page__main {
+        align-items: center;
+    }
+
+    .Fon-page__title {
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 49px;
+    }
+
+    .Fon-page__subtitle {
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        padding-bottom: 36px;
+    }
+
+    .Footer-list {
+        height: 70px;
+        gap: 40px;
+    }
+
+    .Footer-list-item {
+    font-size: 20px;
+    }
+
+    .Footer-list-element__star {
+        width: 20px;
+    }
+
     .About-games {
         display: none;
     }
 }
+
+@media (max-width: 767px){
+    .About-games {
+        display: none;
+    }
+
+    .Fon-page__main {
+        align-items: center;
+        padding-top: 147px;
+        padding-bottom: 306px;
+    }
+
+    .image-line1, .image-line2, 
+    .image-line3, .image-line4,
+    .image-form, .image-bigstar {
+        display: none;
+    }
+
+    .image-mobile {
+        display: inline-block;
+        position: absolute;
+        left: 55vw;
+        top: -115px;
+    }
+    
+    .image-ministar {
+        width: 21px;
+        height: 21px;
+        top: 64px;
+        left: 91px;
+    }
+
+    .image-smallstar {
+        left: 37px;
+        top: 97px;
+        width: 33px;
+        height: 33px;
+    }
+
+    .image-ministar2 {
+        top: 557px;
+        right: 20vw;
+        width: 18px;
+        height: 18px;
+    }
+
+    .image-smallstar2 {
+        right: 10vw;
+        top: 580px;
+        width: 39px;
+        height: 41px;
+    }
+
+
+    .Fon-page__title {
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 49px;
+    }
+
+    .Fon-page__subtitle {
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        padding-bottom: 36px;
+    }
+
+    .bold {
+        font-weight: 600;
+    }
+
+    .text-container {
+        display: none;
+    }
+
+    .Fon-page__link {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 141.69%;
+        width: 285px;
+        height: 55px;
+    }
+
+    .Footer-list {
+        height: 51px;
+        gap: 27px;
+        padding-left: 24px;
+
+    }
+
+    .Footer-list-item {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 110%;
+    }
+
+    .Footer-list-element__star {
+        width: 19px;
+    }
+
+}
+
