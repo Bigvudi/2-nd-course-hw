@@ -144,9 +144,9 @@ button {
     transition: all 0.2s ease;
 }
 .Fon-page__link:hover {
-    background: white;
-    color: black;
-    border-color: black;
+    background: rgba(255, 255, 255, 1);
+    color: rgba(32, 32, 39, 1);
+    border-color: rgba(32, 32, 39, 1);
 }
 
 
@@ -552,13 +552,82 @@ button {
     text-align: center;
 }
 
-@media (hover: none) {
-    .Fon-page__link:hover {
-        background: black;
-        border: 1px solid black;
-        color: white; 
-    }
+/* Мини-игры */
+
+.game-section {
+    background-color: rgba(32, 32, 39, 1);
 }
+
+.game-section__title {
+    padding-top: 46px;
+    padding-bottom: 72px;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.riddle1-game {
+    width: 100%;
+    height: 500px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid   black;
+    border-radius: 30px;
+    display:flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+
+.riddle1 {
+    padding: 48px;
+    width: 100%;
+}
+
+.riddle-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 59px;
+    color: rgba(32, 32, 39, 1);
+    padding-bottom: 24px;
+}
+
+.riddle-subtitle {
+    color: rgba(32, 32, 39, 1);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    padding-bottom: 36px;
+}
+
+.riddle-play {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(32, 32, 39, 1);
+    border-radius: 60px;
+    background: rgba(32, 32, 39, 1);
+    width: 247px;
+    height: 66px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 141.69%;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 16px 28px 16px 28px;
+}
+
+.riddle-play:hover {
+    background: rgba(255, 255, 255, 1);
+    color: rgba(32, 32, 39, 1);
+    border-color: rgba(32, 32, 39, 1);
+}
+
+
+
+
 
 @media (min-width: 768px) and (max-width:1024px){
     .image-line1, .image-line2, 
@@ -629,6 +698,13 @@ button {
 @media (max-width: 767px){
     .About-games {
         display: none;
+    }
+
+
+    .Fon-page__link:hover {
+    background: rgba(32, 32, 39, 1);
+    color: rgba(255, 255, 255, 1);
+    border-color: rgba(32, 32, 39, 1);
     }
 
     .Fon-page__main {
@@ -711,6 +787,9 @@ button {
         line-height: 141.69%;
         width: 285px;
         height: 55px;
+        background: rgba(32, 32, 39, 1);
+        border: 1px solid rgba(32, 32, 39, 1);
+        color: white; 
     }
 
     .Footer-list {
