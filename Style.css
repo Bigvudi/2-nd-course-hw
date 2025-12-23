@@ -277,7 +277,7 @@ button {
     background-image: url(./img/Обложка1.jpg);
     background-repeat: no-repeat;
     position: relative;
-    overflow: hidden; /* Скрываем всё, что вылезает за пределы */
+    overflow: hidden; 
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
