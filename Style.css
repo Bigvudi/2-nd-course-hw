@@ -556,6 +556,39 @@ button {
 
 .game-section {
     background-color: rgba(32, 32, 39, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.game-section__ministar1 {
+    position: absolute;
+    top: 93px;
+    right: 124px;
+}
+
+.game-section__smallstar1 {
+    position: absolute;
+    top: 126px;
+    left: 1320px;
+}
+
+.game-section__ministar2 {
+    position: absolute;
+    bottom: 45px;
+    left: 1249px;
+}
+
+.game-section__smallstar2 {
+    position: absolute;
+    bottom: 65px;
+    left: 1329px;
+}
+
+
+.memory-game {
+    gap: 36px;
+    display: flex;
+    flex-direction: column;
 }
 
 .game-section__title {
@@ -566,6 +599,7 @@ button {
     line-height: 78px;
     color: rgba(255, 255, 255, 1);
 }
+
 
 .riddle1-game {
     width: 100%;
@@ -578,10 +612,73 @@ button {
     overflow: hidden;
 }
 
-.riddle1 {
+.riddle {
     padding: 48px;
     width: 100%;
 }
+
+.riddle2-game {
+    width: 100%;
+    height: 500px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid   black;
+    border-radius: 30px;
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+
+.riddle3-game {
+    width: 100%;
+    height: 500px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid   black;
+    border-radius: 30px;
+    display:flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+
+
+.riddle4-game {
+    width: 100%;
+    height: 500px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid   black;
+    border-radius: 30px;
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+
+.riddle5-game {
+    width: 100%;
+    height: 500px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid   black;
+    border-radius: 30px;
+    display:flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+
+
+.riddle6-game {
+    width: 100%;
+    height: 500px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid   black;
+    border-radius: 30px;
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin-bottom: 144px;
+}
+
+
+
 
 .riddle-title {
     font-size: 48px;
@@ -623,6 +720,22 @@ button {
     background: rgba(255, 255, 255, 1);
     color: rgba(32, 32, 39, 1);
     border-color: rgba(32, 32, 39, 1);
+}
+
+/* ФУТЕР */
+
+.footer {
+    background-color:rgba(189, 237, 53, 1);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-end {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
 }
 
 
