@@ -63,12 +63,12 @@ if (monthNumber > 12 || monthNumber < 1) {console.log("Такого месяца
         case 8:
             console.log("Лето");
             break;
-        case 9:
-        case 10:
-        case 11:
-            console.log("Осень");
-            break;
+        default:
+             console.log("Осень");
+        break;
     }
 }
+
+
 
 
