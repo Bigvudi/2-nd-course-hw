@@ -15,7 +15,7 @@ if (pasword === newpasword) {console.log ("Пароль верный");
 
 let c = Number(prompt("Введите любое число"));
 
-if (c > 0 || c > 10) { console.log("Верно");
+if (c > 0 && c > 10) { console.log("Верно");
     
 } else {console.log("Не верно");
     
