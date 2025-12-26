@@ -23,8 +23,9 @@ if (c > 0 || c > 10) { console.log("Верно");
 
 // ДЗ3
 
-let d = Number(prompt("Введите первое любое число"));
-let e = Number(prompt("Введите второе любое число"));
+
+let d = Number(prompt("Введите первое число"));
+let e = Number(prompt("Введите второе число"));
 
 if (d > 100 || e > 100) {console.log("Верно");
     
