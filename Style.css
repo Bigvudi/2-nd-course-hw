@@ -563,25 +563,25 @@ button {
 .game-section__ministar1 {
     position: absolute;
     top: 93px;
-    left: 1277px;
+    right: 124px;
 }
 
 .game-section__smallstar1 {
     position: absolute;
     top: 126px;
-    left: 1319px;
+    right: 44px;
 }
 
 .game-section__ministar2 {
     position: absolute;
     bottom: 45px;
-    left: 1249px;
+    right: 150px;
 }
 
 .game-section__smallstar2 {
     position: absolute;
     bottom: 65px;
-    left: 1329px;
+    right: 52px;
 }
 
 
