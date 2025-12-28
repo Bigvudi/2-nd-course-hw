@@ -1,36 +1,29 @@
 // ДЗ1
 
-let pasword = 'car';
-
-let newpasword = prompt("Введите пароль");
-
-
-if (pasword === newpasword) {console.log ("Пароль верный");
-    
-} else {console.log ("Пароль не верный");
-    
+let i = 1;
+while (i <= 2) {
+    i++;
+    console.log("Привет");
 }
+
 
 // ДЗ2
 
-let c = Number(prompt("Введите любое число"));
-
-if (c > 0 && c > 10) { console.log("Верно");
-    
-} else {console.log("Не верно");
-    
+let q = 0;
+while (q < 5) {
+    q++;
+    console.log(q);
 }
+
+
 
 // ДЗ3
 
 
-let d = Number(prompt("Введите первое число"));
-let e = Number(prompt("Введите второе число"));
-
-if (d > 100 || e > 100) {console.log("Верно");
-    
-} else { console.log("Не верно");
-    
+let E = 6;
+while (E >= 6 && E <22) {
+    E++;
+    console.log(E);
 }
 
 // ДЗ4
@@ -41,35 +34,26 @@ let b = '3';
 console.log(Number(a) + Number(b)); 
 
 // ДЗ5
+let n = 1000;
+let num = 0;
 
-
-let monthNumber = Number(prompt("Введите месяц"));
-
-if (monthNumber > 12 || monthNumber < 1) {console.log("Такого месяца не существует");
-    
-} else {
-    switch (monthNumber) {
-        case 12:
-        case 1:
-        case 2:
-            console.log("Зима");
-            break;
-        case 3:
-        case 4:
-        case 5:
-            console.log("Весна");
-            break;
-        case 6:
-        case 7:
-        case 8:
-            console.log("Лето");
-            break;
-        default:
-             console.log("Осень");
-        break;
-    }
+while (n >= 50) {
+    n = n / 2;
+    num++;
 }
+console.log("Конечное число", n);
+console.log("Количество циклов", num);
 
+
+// ДЗ6
+
+let d = 1;
+while (d <= 31) {
+    if (d == 5 || d == 12 || d == 19 || d == 26) {
+        console.log(`сегодня пятница, ${d} число. Необходимо подготовить отчет.`);
+    }
+    d++; 
+}
 
 
 
