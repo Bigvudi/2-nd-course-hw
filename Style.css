@@ -726,7 +726,6 @@ button {
 
 .footer {
     background-color:rgba(189, 237, 53, 1);
-    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -736,6 +735,8 @@ button {
     font-size: 24px;
     font-weight: 600;
     line-height: 29px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 
@@ -806,9 +807,69 @@ button {
     .About-games {
         display: none;
     }
+
+/* 
+    МИНИ-ИГРЫ */
+
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .game-section__title {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .riddle {
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .riddle1-game, .riddle2-game, .riddle3-game,
+    .riddle4-game, .riddle5-game, .riddle6-game {
+        height: 100%;
+        width: 100%;
 }
 
+    .image {
+        width: 100%;
+    }
+
+    .image__icon {
+        
+        width: 100%;
+        height: 100%;
+    }
+
+    .riddle-title {
+        font-size: 42px;
+        line-height: 44px;
+    }
+
+    .riddle-subtitle {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .game-section__ministar1, .game-section__ministar2,
+    .game-section__smallstar1, .game-section__smallstar2 {
+        display: none;
+    }
+
+    
+}
+
+
 @media (max-width: 767px){
+    
+    .center {
+        padding-left: calc(50% - 171px);
+        padding-right: calc(50% - 171px);
+    }
+    
     .About-games {
         display: none;
     }
@@ -921,6 +982,79 @@ button {
     .Footer-list-element__star {
         width: 19px;
     }
+
+    /* СЕКЦИЯ ИГРЫ */
+
+    .game-section__title {
+    font-size: 40px;
+    line-height: 49px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    }
+
+    .riddle1-game {
+        gap: 22px;
+    }
+
+    .game-section__ministar1, .game-section__ministar2,
+    .game-section__smallstar1, .game-section__smallstar2 {
+        display: none;
+    }
+
+    .memory-game {
+        gap: 24px;
+    }
+
+
+    
+    .riddle1-game, .riddle2-game, .riddle3-game,
+    .riddle4-game, .riddle5-game, .riddle6-game {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .riddle6-game {
+        margin-bottom: 10px;
+    }
+
+    .image__icon {
+        width: 373px;
+        height: 285px;
+    }
+
+    .riddle {
+        padding: 29px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .riddle-title {
+        font-size: 32px;
+        line-height: 39px;
+        padding-bottom: 16px;
+    }
+
+    .riddle-subtitle {
+        font-size: 16px;
+        line-height: 20px;
+        padding-bottom: 32px;
+    }
+
+    .riddle-play {
+        width: 100%;
+        height: 55px;
+    }
+
+    .footer-end {
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    }
+
 
 }
 
