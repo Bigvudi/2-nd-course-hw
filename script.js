@@ -152,4 +152,34 @@ function minCh (a, b)
 minCh (6, 6);
 minCh (3, 6);
 
+// Задание 2
+function compare (d) 
+{
+    if (d % 2 == 0) {
+        console.log(`число ${d} четное`);
+        return d; 
+       
+    }
+    else {
+        console.log (`число ${d} не четное`);
+        return d;
+    }
+}
+
+compare (6);
+compare (3);
+
+// Задание 3
+
+function square (a) {
+  console.log(`${a**2}`);
+}
+
+square(2);
+
+function chislo (a) {
+    return a**2;
+}
+
+chislo(6);
 
