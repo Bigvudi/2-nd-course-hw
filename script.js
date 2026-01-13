@@ -90,50 +90,6 @@ while (nam !== rand) {
 
 console.log("Вы угадали! Ваше число равно загаданному.");
 
-// // // 1. Генерируем случайное целое число от 1 до 10
-// let target = Math.floor(Math.random() * 10) + 1; 
-
-// // 2. Просим ввести число в первый раз и запоминаем его навсегда
-// const firstAttempt = +prompt("Это ваша первая попытка! Введите число от 1 до 10");
-// let currentNum = firstAttempt; 
-
-// // 3. Запускаем цикл, который будет работать, пока не угадаем
-// while (currentNum !== target) {
-//     // Подсказка с разницей
-//     if (currentNum > target) {
-//         alert(`Мимо! Число ${currentNum} больше загаданного на ${currentNum - target}.
-// Ваше самое первое число было: ${firstAttempt}`);
-//     } else {
-//         alert(`Мимо! Число ${currentNum} меньше загаданного на ${target - currentNum}.
-// Ваше самое первое число было: ${firstAttempt}`);
-//     }
-
-//     // Просим ввести новое число, чтобы продолжить цикл
-//     currentNum = +prompt("Попробуйте еще раз:");
-// }
-
-// // 4. Победа
-// alert(`Вы угадали! Это число ${target}. 
-// // Начали вы с числа ${firstAttempt}, а закончили числом ${currentNum}.`);
-
-
-
-// function calc(a, b) {
-//     let sum = a + b;
-//     let mult = a * b;
-//     console.log(`Сумма равна ${sum}, при умножении ${mult}`);
-// }
-
-// calc (4, 5);
-// calc (10, 12);
-
-// let ansver = prompt('Седит дед во сто шуб одет');
-//     if (ansver==='лук') {
-//         console.log("good");
-//     }
-//     else { 
-//         console.log('nogood');
-//     }
 
 // Задание 1
 function minCh (a, b) 
@@ -177,9 +133,76 @@ function square (a) {
 
 square(2);
 
-function chislo (a) {
+function numeric (a) {
     return a**2;
 }
 
-chislo(6);
+numeric(6);
 
+// Задание 4
+
+
+
+function checkAge() {
+    let v = +prompt("Сколько Вам лет?");
+    if (v < 0) {console.log("Вы ввели неправильное значение");
+        
+    } else if (v >= 0 && v <= 12) {console.log("Привет, друг!");
+        
+    }
+    else console.log("Добро пожаловать!"); 
+}
+
+checkAge();
+
+// Задание 5
+
+function nambe(x, y) {
+    if (isNaN(x) || isNaN(y)) {
+        return "Одно или оба значения не являются числом";
+    } else { 
+        return x*y;        
+    }
+}
+nambe(3, 5);
+
+
+// Задание 6
+
+let userInput = prompt("Введите число:");
+
+function cubeNumber(input) {
+  if (isNaN(input)) {
+    return 'Переданный параметр не является числом';
+  } else {
+    let n = Number(input); 
+    let cube = n ** 3; 
+    return `n в кубе равняется ${cube}`;
+  }
+}
+
+console.log(cubeNumber(userInput));
+
+// Задание 7
+
+let circle1 = {
+  radius: 5,
+  getArea: function() {
+    return Math.PI * Math.pow(this.radius, 2);
+  },
+  getPerimeter: function() {
+    return 2 * Math.PI * this.radius;
+  }
+};
+
+let circle2 = {
+  radius: 10,
+  getArea: function() {
+    return Math.PI * Math.pow(this.radius, 2);
+  },
+  getPerimeter: function() {
+    return 2 * Math.PI * this.radius;
+  }
+};
+console.log(circle1.getArea());      
+console.log(circle2.getPerimeter());
