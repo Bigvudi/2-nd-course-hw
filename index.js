@@ -1,6 +1,6 @@
 function guessNumber() {
     let nam = +prompt("Угадайте число от 0 до 100:");
-    let rand = Math.floor(Math.random() * 100);
+    let rand = Math.floor(Math.random() * 101);
   
 
   while (nam !== rand) {
@@ -36,13 +36,11 @@ minCh (3, 6);
 function compare (d) 
 {
     if (d % 2 == 0) {
-        console.log(`число ${d} четное`);
-        return d; 
+        return 'Число четное'; 
        
     }
     else {
-        console.log (`число ${d} не четное`);
-        return d;
+        return 'Число нечетное';
     }
 }
 
