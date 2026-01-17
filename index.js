@@ -15,115 +15,76 @@ function guessNumber() {
   alert("Вы угадали! Ваше число равно загаданному.");
 }
 
-// Задание 1
-function minCh (a, b) 
-{
-    if (a <= b) {
-        console.log(`наименьшее число ${a}`);
-        return a; 
-       
-    }
-    else {
-        console.log (`наименьшее число ${b}`);
-        return b;
-    }
+// Задание1
+
+const numbs = [1, 5, 4, 10, 0, 3]; 
+
+for (i = 0; i < numbs.length; i++) {
+  console.log(numbs[i]);
+  if (numbs[i]===10) {
+  break;
+}
 }
 
-minCh (6, 6);
-minCh (3, 6);
+// Задание2
 
-// Задание 2
-function compare (d) 
-{
-    if (d % 2 == 0) {
-        return 'Число четное'; 
-       
-    }
-    else {
-        return 'Число нечетное';
-    }
-}
+const numbsMass = [1, 3, 5, 10, 20];
+numbsMass.forEach((el, index) => {
+   if (index === 4) {
+      console.log(`${index}: ${el}`); 
+   }
+});
 
-compare (6);
-compare (3);
+// Задание3
 
-// Задание 3
+const numMass = [1, 3, 5, 10, 20];
+let joinedMass = numMass.join(" ");
+console.log(joinedMass);
 
-function square (a) {
-  console.log(`${a**2}`);
-}
+// Задание4
 
-square(2);
+let matrix = []; 
 
-function numeric (a) {
-    return a**2;
-}
-
-numeric(6);
-
-// Задание 4
-
-
-
-function checkAge() {
-    let v = +prompt("Сколько Вам лет?");
-    if (v < 0) {console.log("Вы ввели неправильное значение");
-        
-    } else if (v >= 0 && v <= 12) {console.log("Привет, друг!");
-        
-    }
-    else console.log("Добро пожаловать!"); 
-}
-
-checkAge();
-
-// Задание 5
-
-function nambe(x, y) {
-    if (isNaN(x) || isNaN(y)) {
-        return "Одно или оба значения не являются числом";
-    } else { 
-        return x*y;        
-    }
-}
-nambe(3, 5);
-
-// Задание 6
-
-let userInput = prompt("Введите число:");
-
-function cubeNumber(input) {
-  if (isNaN(input)) {
-    return 'Переданный параметр не является числом';
-  } else {
-    let n = Number(input); 
-    let cube = n ** 3; 
-    return `n в кубе равняется ${cube}`;
+for (let i = 0; i < 3; i++) {
+  let row = []; 
+  
+  for (let j = 0; j < 3; j++) {
+    row.push(1); 
   }
+  
+  matrix.push(row); 
 }
 
-console.log(cubeNumber(userInput));
+console.log(matrix);
 
-// Задание 7
+// Задание5
 
-let circle1 = {
-  radius: 5,
-  getArea: function() {
-    return Math.PI * Math.pow(this.radius, 2);
-  },
-  getPerimeter: function() {
-    return 2 * Math.PI * this.radius;
-  }
-};
+const mass = [1, 1, 1];
 
-let circle2 = {
-  radius: 10,
-  getArea: function() {
-    return Math.PI * Math.pow(this.radius, 2);
-  },
-  getPerimeter: function() {
-    return 2 * Math.PI * this.radius;
-  }
-};
-console.log(circle1.getArea());      
-console.log(circle2.getPerimeter());
+mass.push (2, 2, 2);
+
+console.log(mass);
+
+// Задание6
+
+const sort = [9, 8, 7, 'a', 6, 5];
+sort.sort();
+console.log(sort);
+
+const filtereSort = sort.filter(letter => typeof letter === 'string');
+console.log(filtereSort);
+
+// Задание7
+// Вот простой массив чисел для примера
+let array = [1, 2, 3, 4, 5, 6];
+let input = +prompt('Введите число');
+
+// Проверяем, есть ли число 5 в нашем массиве
+let isFound = array.includes(input);
+
+if (isFound) {alert("Угадал"); 
+}
+  else {alert("Не угадал");
+}
+
+
