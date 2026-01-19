@@ -1,7 +1,11 @@
 function guessNumber() {
-    let nam = +prompt("Угадайте число от 0 до 100:");
-    let rand = Math.floor(Math.random() * 101);
-  
+  let rand = Math.floor(Math.random() * 101);
+  let input = prompt("Угадайте число от 0 до 100:");
+
+  // Проверка на отмену при первом вводе
+  if (input === null) return;
+
+  let nam = +input;
 
   while (nam !== rand) {
     if (nam > rand) {
@@ -9,7 +13,13 @@ function guessNumber() {
     } else if (nam < rand) {
       alert(`Ваше число меньше на ${rand - nam}`);
     }
-    nam = +prompt("Попробуйте еще раз:");
+    
+    input = prompt("Попробуйте еще раз:");
+    
+    // Проверка на отмену внутри цикла
+    if (input === null) return;
+    
+    nam = +input;
   }
 
   alert("Вы угадали! Ваше число равно загаданному.");
@@ -25,18 +35,28 @@ function task() {
   let operation = arithTask[index]; 
 
   let result;
-  if (operation === '+') result = a + b;
-  else if (operation === '-') result = a - b;
-  else if (operation === '*') result = a * b;
-  else result = a / b;
+  if (operation === '+') {
+    result = a + b;
+  } else if (operation === '-') {
+    result = a - b;
+  } else if (operation === '*') {
+    result = a * b;
+  } else {
+    result = a; 
+    a = a * b; 
+  }
 
-  let answer = +prompt(`Сколько будет ${a} ${operation} ${b}?`);
+  let input = prompt(`Сколько будет ${a} ${operation} ${b}?`);
+
+  if (input === null) return;
+
+  let answer = +input;
 
   if (answer === result) {
     alert('Ответ верный');
   } else {
     alert("Ответ не верный, попробуйте еще раз");
-    task(a, b); 
+    task();
   }
 }
 
@@ -59,12 +79,10 @@ for (i = 0; i < numbs.length; i++) {
 // Дан массив: [1, 5, 4, 10, 0, 3].
 // Найдите индекс значения 4 в этом массиве.
 
-const numbsMass = [1, 3, 5, 10, 20];
-numbsMass.forEach((el, index) => {
-   if (index === 4) {
-      console.log(`${index}: ${el}`); 
-   }
-});
+const numbMass = [1, 5, 4, 10, 0, 3];
+const index = numbMass.indexOf(4);
+
+console.log(index);
 
 // Задание3
 // Дан массив чисел: [1, 3, 5, 10, 20].
@@ -105,12 +123,14 @@ console.log(mass);
 // sort отсортируйте массив и удалите букву 'a'
 //  из массива. Затем выведите массив.
 
-const sort = [9, 8, 7, 'a', 6, 5];
-sort.sort();
-console.log(sort);
 
-const filtereSort = sort.filter(letter => typeof letter === 'string');
-console.log(filtereSort);
+const arrMass = [9, 8, 7, 'a', 6, 5];
+
+arrMass.sort(); 
+
+arrMass.pop(); 
+
+console.log(arrMass); 
 
 // Задание7
 
