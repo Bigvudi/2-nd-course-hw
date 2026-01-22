@@ -489,3 +489,47 @@ const average = sum / randomArray.length;
 
 console.log('Сумма элементов:', sum);
 console.log('Среднее арифметическое:', average);
+
+
+// Игра3
+function reverseText() {
+    let userInput = prompt("Введите текст, который нужно перевернуть:");
+    if (userInput !== null) {
+        let reversedText = userInput.split("").reverse().join("");
+        alert("Ваш перевернутый текст:\n" + reversedText);
+    }
+}
+
+// Игра4
+function puzzle() {
+    const quiz = [
+        {
+            question: "Какой цвет Солнца?",
+            options: ["1. Желтый", "2. Белый", "3. Красный"],
+            correctAnswer: 1
+        },
+        {
+            question: "Сколько дней в високосном году?",
+            options: ["1. 364", "2. 365", "3. 366"],
+            correctAnswer: 3
+        },
+        {
+            question: "Сколько дней во втором месяце года?",
+            options: ["1. 28", "2. 29", "3. 30"],
+            correctAnswer: 1
+        }
+    ];
+
+    let correctCount = 0;
+
+    for (let i = 0; i < quiz.length; i++) {
+        let message = quiz[i].question + "\n" + quiz[i].options.join("\n");
+        let userAnswer = prompt(message + "\n\nВведите номер ответа:");
+
+        if (parseInt(userAnswer) === quiz[i].correctAnswer) {
+            correctCount++;
+        }
+    }
+
+    alert(`Игра окончена! Вы ответили правильно на ${correctCount} из ${quiz.length} вопросов.`);
+  }
