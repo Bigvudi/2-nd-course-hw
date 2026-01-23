@@ -115,3 +115,121 @@ console.log(stringText.toUpperCase());
 //   те элементы первого массива, которые начинаются со
 //    второй строки. Регистр символов не влияет на результат.
 
+function filterStrings(list, text) {
+    let result = []; 
+    let search = text.toLowerCase(); 
+
+    for (let item of list) {
+       if (item.toLowerCase().startsWith(search)) {
+        result.push(item);
+        }
+    }
+    return result;
+}
+
+const fruits = ['Яблоко', 'апельсин', 'ягода', 'Банан'];
+console.log(filterStrings(fruits, 'я')); 
+
+// задание3
+
+// Округлить число 32.58884:
+
+// До меньшего целого.
+// До большего целого.
+// До ближайшего целого.
+
+let x = 32.58884;
+console.log(Math.floor(x));
+console.log(Math.ceil(x));
+console.log(Math.round(x));
+
+// Задание 4
+// Найти минимальное и максимальное значения из 
+// чисел 52, 53, 49, 77, 21, 32 и вывести их в консоль.
+
+const minmaxNumber = [52, 53, 49, 77, 21, 32];
+const min = Math.min(...minmaxNumber);
+const max = Math.max(...minmaxNumber);
+console.log(min);
+console.log(max);
+
+// Задание 5
+// Создать функцию, которая выводит в консоль
+//  случайное число от 1 до 10.
+function random() {
+  return nambs =  Math.floor(Math.random()*11)
+}
+random();
+
+// Задание 6
+// Написать функцию, которая принимает целое
+// число и возвращает массив случайных чисел
+//  от 0 до этого числа. Длина массива должна 
+// быть в два раза меньше переданного числа.
+
+function nambsMass() {
+  let d = +prompt("Введите целое число");
+  let result = [];
+  let count = Math.floor(d / 2);
+  for (let i = 0; i < count; i++) {
+    result.push(Math.floor(Math.random() * (d + 1)));
+  }
+  return result;
+}
+console.log(nambsMass());
+
+// Задание 7
+// Создать функцию, которая принимает два целых
+//  числа и возвращает случайное число в этом диапазоне.
+
+function newNambers(a, b) {
+  a = Math.ceil(a);
+  b = Math.floor(b);
+  return Math.floor(Math.random() * (b - a + 1)) + a;
+}
+
+console.log(newNambers(5, 15));
+
+// Задание 8
+// Вывести в консоль текущую дату.
+
+console.log(Date());
+
+// Задание 9
+// Создать переменную 
+// currentDate
+// , хранящую текущую дату. Вывести дату, которая
+// наступит через 73 дня после текущей.
+
+let currentDate = new Date();
+currentDate.setDate(currentDate.getDate() + 73);
+console.log("Дата через 73 дня:", currentDate.toDateString());
+
+
+// Задание 10
+// Написать функцию, которая принимает дату и возвращает ее в формате:
+// Дата: [число] [месяц на русском] [год] — это [день недели на русском].
+// Время: [часы]:[минуты]:[секунды]
+
+function getFormattedDate(d) {
+  const months = [
+    'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+    'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
+  ];
+  const days = [
+    'воскресенье', 'понедельник', 'вторник', 'среда',
+    'четверг', 'пятница', 'суббота'
+  ];
+  const day = d.getDate();
+  const month = months[d.getMonth()];
+  const year = d.getFullYear();
+  const weekday = days[d.getDay()];
+  
+  const hours = String(d.getHours()).padStart(2, '0');
+  const minutes = String(d.getMinutes()).padStart(2, '0');
+  const seconds = String(d.getSeconds()).padStart(2, '0');
+  
+  return `Дата: ${day} ${month} ${year} — это ${weekday}.\nВремя: ${hours}:${minutes}:${seconds}`;
+}
+
+console.log(getFormattedDate(new Date()));
