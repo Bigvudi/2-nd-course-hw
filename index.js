@@ -233,3 +233,5 @@ function getFormattedDate(d) {
 }
 
 console.log(getFormattedDate(new Date()));
+
+
