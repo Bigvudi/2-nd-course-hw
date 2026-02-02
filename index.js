@@ -103,135 +103,147 @@ function puzzle() {
     alert(`Игра окончена! Вы ответили правильно на ${correctCount} из ${quiz.length} вопросов.`);
 }
 
-// Задание1
-// Преобразовать строку 'js'в верхний регистр.
+// игра5
 
-let stringText = 'js';
-console.log(stringText.toUpperCase());
+function playHand() {
+    // 1. Запрашиваем ввод
+    let userHand = prompt("Введите камень, ножницы или бумага");
+    const a = "камень";
+    const b = "ножницы";
+    const c = "бумага";
+
+    if (userHand === null) return; //проверка на отмену
+
+    userHand = userHand.toLowerCase();
+
+    let variants = [a, b, c];
+    let compHand = variants[Math.floor(Math.random() * variants.length)];
+
+    if (userHand !== a && userHand !== b && userHand !== c) {
+        alert("Вы ввели неверные данные. Пожалуйста, введите: камень, ножницы или бумага.");
+    } 
+    else if (userHand === compHand) {
+        alert(`У нас ничья! Ваш выбор: ${userHand}, мой выбор: ${compHand}`);
+    } 
+    else if (
+        (userHand === a && compHand === b) || // Камень бьет ножницы
+        (userHand === b && compHand === c) || // Ножницы бьют бумагу
+        (userHand === c && compHand === a)    // Бумага бьет камень
+    ) {
+        alert(`Вы победили! Ваш выбор: ${userHand}, мой выбор: ${compHand}`);
+    } 
+    else {
+        alert(`Вы проиграли! Ваш выбор: ${userHand}, мой выбор: ${compHand}`);
+    }
+}
+// Задание1
+//С помощью метода массива sort отсортируйте массив 
+// people по возрастанию возраста и выведите результат в консоль.
+const people = [
+   { name: 'Глеб', age: 29 },
+   { name: 'Анна', age: 17 },
+   { name: 'Олег', age: 7 },
+   { name: 'Оксана', age: 47 }];
+people.sort((a, b) => a.age - b.age);;
+console.log(people);
 
 // Задание2
-// Создать функцию, которая принимает массив строк и строку.
-//  Функция должна вернуть новый массив, содержащий только
-//   те элементы первого массива, которые начинаются со
-//    второй строки. Регистр символов не влияет на результат.
 
-function filterStrings(list, text) {
-    let result = []; 
-    let search = text.toLowerCase(); 
+// Реализуйте функцию filter, которая должна работать аналогично методу массива 
+// filter. Возьмите за основу функцию map, которую мы реализовывали на уроке.
+// Чтобы из функции map сделать filter, нужно, в зависимости от результата вызова 
+// ruleFunction, принимать решение о том, добавлять в результирующий массив
+//  очередной элемент или нет.
 
-    for (let item of list) {
-       if (item.toLowerCase().startsWith(search)) {
-        result.push(item);
+// Функция-правило: проверяет, является ли число положительным
+function isPositive(number) {
+    return number > 0;
+}
+
+// Функция-правило: проверяет, является ли человек мужчиной
+function isMale(person) {
+    return person.gender === 'male';
+}
+
+// Универсальная функция фильтрации
+function filter(array, ruleFunction) {
+    const result = []; // Создаем новый пустой массив для результата
+
+    for (let i = 0; i < array.length; i++) {
+        // Вызываем функцию-правило для текущего элемента
+        // Если она возвращает true, добавляем элемент в результат
+        if (ruleFunction(array[i])) {
+            result.push(array[i]);
         }
     }
+
     return result;
 }
 
-const fruits = ['Яблоко', 'апельсин', 'ягода', 'Банан'];
-console.log(filterStrings(fruits, 'я')); 
+// Тест 1: Фильтрация чисел
+console.log(filter([3, -4, 1, 9], isPositive)); 
+// Ожидаемый вывод: [3, 1, 9]
 
-// задание3
 
-// Округлить число 32.58884:
+const allPeople = [
+   {name: 'Глеб', gender: 'male'},
+   {name: 'Анна', gender: 'female'},
+   {name: 'Олег', gender: 'male'},
+   {name: 'Оксана', gender: 'female'}
+];
 
-// До меньшего целого.
-// До большего целого.
-// До ближайшего целого.
+console.log(filter(allPeople, isMale)); 
 
-let x = 32.58884;
-console.log(Math.floor(x));
-console.log(Math.ceil(x));
-console.log(Math.round(x));
-
-// Задание 4
-// Найти минимальное и максимальное значения из 
-// чисел 52, 53, 49, 77, 21, 32 и вывести их в консоль.
-
-const minmaxNumber = [52, 53, 49, 77, 21, 32];
-const min = Math.min(...minmaxNumber);
-const max = Math.max(...minmaxNumber);
-console.log(min);
-console.log(max);
-
-// Задание 5
-// Создать функцию, которая выводит в консоль
-//  случайное число от 1 до 10.
-function random() {
-  return nambs =  Math.floor(Math.random()*11)
-}
-random();
-
-// Задание 6
-// Написать функцию, которая принимает целое
-// число и возвращает массив случайных чисел
-//  от 0 до этого числа. Длина массива должна 
-// быть в два раза меньше переданного числа.
-
-function nambsMass() {
-  let d = +prompt("Введите целое число");
-  let result = [];
-  let count = Math.floor(d / 2);
-  for (let i = 0; i < count; i++) {
-    result.push(Math.floor(Math.random() * (d + 1)));
-  }
-  return result;
-}
-console.log(nambsMass());
-
-// Задание 7
-// Создать функцию, которая принимает два целых
-//  числа и возвращает случайное число в этом диапазоне.
-
-function newNambers(a, b) {
-  a = Math.ceil(a);
-  b = Math.floor(b);
-  return Math.floor(Math.random() * (b - a + 1)) + a;
+// Задача3
+function timer() {
+    console.log(new Date());
 }
 
-console.log(newNambers(5, 15));
+// Запускаем интервал каждые 3 секунды
+const goTimer = setInterval(timer, 3000);
 
-// Задание 8
-// Вывести в консоль текущую дату.
+// Через 30 секунд останавливаем интервал и пишем текст
+setTimeout(function() {
+    clearInterval(goTimer);
+    console.log("30 секунд прошло");
+}, 30000);
 
-console.log(Date());
+// Задание4
+// Сейчас код ниже выводит в консоль «Привет, Глеб!» сразу после запуска.
+// Допишите функцию delayForSecond так, чтобы приветствие выводилось в
+//  консоль не сразу, а спустя 1 секунду. Используйте setTimeout.
 
-// Задание 9
-// Создать переменную 
-// currentDate
-// , хранящую текущую дату. Вывести дату, которая
-// наступит через 73 дня после текущей.
-
-let currentDate = new Date();
-currentDate.setDate(currentDate.getDate() + 73);
-console.log("Дата через 73 дня:", currentDate.toDateString());
-
-
-// Задание 10
-// Написать функцию, которая принимает дату и возвращает ее в формате:
-// Дата: [число] [месяц на русском] [год] — это [день недели на русском].
-// Время: [часы]:[минуты]:[секунды]
-
-function getFormattedDate(d) {
-  const months = [
-    'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
-    'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
-  ];
-  const days = [
-    'воскресенье', 'понедельник', 'вторник', 'среда',
-    'четверг', 'пятница', 'суббота'
-  ];
-  const day = d.getDate();
-  const month = months[d.getMonth()];
-  const year = d.getFullYear();
-  const weekday = days[d.getDay()];
-  
-  const hours = String(d.getHours()).padStart(2, '0');
-  const minutes = String(d.getMinutes()).padStart(2, '0');
-  const seconds = String(d.getSeconds()).padStart(2, '0');
-  
-  return `Дата: ${day} ${month} ${year} — это ${weekday}.\nВремя: ${hours}:${minutes}:${seconds}`;
+function delayForSecond(callback) {
+    // Код писать можно только внутри этой функции
+    setTimeout(function() {
+       callback();
+   }, 1000);
 }
 
-console.log(getFormattedDate(new Date()));
+delayForSecond(function () {
+   console.log('Привет, Глеб!');
+})
 
+// Задание5
+// Посмотрите код. В нём допущена ошибка, и он выводит сообщения не в том порядке:
 
+// Функция delayForSecond через 1 секунду пишет в консоль 
+// «Прошла одна секунда», а затем вызывает переданный колбэк
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if(cb) {  cb(); }
+    }, 1000)
+}
+
+// Функция sayHi выводит в консоль приветствие для указанного имени
+function sayHi (name) {
+    console.log(`Привет, ${name}!`);
+}
+
+// Код выше менять нельзя
+
+// Нужно изменить код ниже:
+delayForSecond(function() {
+    sayHi('Глеб');
+});

@@ -747,3 +747,115 @@ function maskCardNumber(cardNumber) {
   // Возвращаем замаскированный номер в нужном формате
   return `**** **** **** ${lastFourDigits}`;
 }
+
+// Задание1
+//С помощью метода массива sort отсортируйте массив 
+// people по возрастанию возраста и выведите результат в консоль.
+const people = [
+   { name: 'Глеб', age: 29 },
+   { name: 'Анна', age: 17 },
+   { name: 'Олег', age: 7 },
+   { name: 'Оксана', age: 47 }];
+people.sort((a, b) => a.age - b.age);;
+console.log(people);
+
+// Задание2
+
+// Реализуйте функцию filter, которая должна работать аналогично методу массива 
+// filter. Возьмите за основу функцию map, которую мы реализовывали на уроке.
+// Чтобы из функции map сделать filter, нужно, в зависимости от результата вызова 
+// ruleFunction, принимать решение о том, добавлять в результирующий массив
+//  очередной элемент или нет.
+
+// Функция-правило: проверяет, является ли число положительным
+function isPositive(number) {
+    return number > 0;
+}
+
+// Функция-правило: проверяет, является ли человек мужчиной
+function isMale(person) {
+    return person.gender === 'male';
+}
+
+// Универсальная функция фильтрации
+function filter(array, ruleFunction) {
+    const result = []; // Создаем новый пустой массив для результата
+
+    for (let i = 0; i < array.length; i++) {
+        // Вызываем функцию-правило для текущего элемента
+        // Если она возвращает true, добавляем элемент в результат
+        if (ruleFunction(array[i])) {
+            result.push(array[i]);
+        }
+    }
+
+    return result;
+}
+
+// Тест 1: Фильтрация чисел
+console.log(filter([3, -4, 1, 9], isPositive)); 
+// Ожидаемый вывод: [3, 1, 9]
+
+
+const allPeople = [
+   {name: 'Глеб', gender: 'male'},
+   {name: 'Анна', gender: 'female'},
+   {name: 'Олег', gender: 'male'},
+   {name: 'Оксана', gender: 'female'}
+];
+
+console.log(filter(allPeople, isMale)); 
+
+// Задача3
+function timer() {
+    console.log(new Date());
+}
+
+// Запускаем интервал каждые 3 секунды
+const goTimer = setInterval(timer, 3000);
+
+// Через 30 секунд останавливаем интервал и пишем текст
+setTimeout(function() {
+    clearInterval(goTimer);
+    console.log("30 секунд прошло");
+}, 30000);
+
+// Задание4
+// Сейчас код ниже выводит в консоль «Привет, Глеб!» сразу после запуска.
+// Допишите функцию delayForSecond так, чтобы приветствие выводилось в
+//  консоль не сразу, а спустя 1 секунду. Используйте setTimeout.
+
+function delayForSecond(callback) {
+    // Код писать можно только внутри этой функции
+    setTimeout(function() {
+       callback();
+   }, 1000);
+}
+
+delayForSecond(function () {
+   console.log('Привет, Глеб!');
+})
+
+// Задание5
+// Посмотрите код. В нём допущена ошибка, и он выводит сообщения не в том порядке:
+
+// Функция delayForSecond через 1 секунду пишет в консоль 
+// «Прошла одна секунда», а затем вызывает переданный колбэк
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if(cb) {  cb(); }
+    }, 1000)
+}
+
+// Функция sayHi выводит в консоль приветствие для указанного имени
+function sayHi (name) {
+    console.log(`Привет, ${name}!`);
+}
+
+// Код выше менять нельзя
+
+// Нужно изменить код ниже:
+delayForSecond(function() {
+    sayHi('Глеб');
+});
