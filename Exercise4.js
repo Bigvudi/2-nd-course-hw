@@ -1,5 +1,7 @@
-const titleEl = document.querySelector('.title');
+const descriptionEl = document.querySelectorAll('.description');
 const clickEl = document.querySelector('.btn');
-clickEl.addEventListener('click', function() {
-    titleEl.textContent = "Привет, мир!";
+
+clickEl.addEventListener('click', function (){
+    descriptionEl.forEach(function(el) {
+        el.textContent = '«Измененный текст».' });
 });
