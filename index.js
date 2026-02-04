@@ -136,6 +136,21 @@ function playHand() {
         alert(`Вы проиграли! Ваш выбор: ${userHand}, мой выбор: ${compHand}`);
     }
 }
+
+    // Игра6
+    // Генератор цветов
+    function randonBackground () {
+    const backColorEl = document.querySelector('#randomcolor');
+    backColorEl.addEventListener('click', (stop) => {
+        stop.preventDefault(); // отменяет стандартное поведения ссылки якоря и страница не поднимается вверх
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        backColorEl.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+    });
+}
+randonBackground(); 
 // Задание1
 //С помощью метода массива sort отсортируйте массив 
 // people по возрастанию возраста и выведите результат в консоль.
