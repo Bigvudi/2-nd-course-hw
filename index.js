@@ -139,14 +139,10 @@ function playHand() {
 
     // Игра6
     // Генератор цветов
-    function randomBackground () {
+function randomBackground() {
     const backColorEl = document.querySelector('#randomcolor');
-    backColorEl.addEventListener('click', (stop) => {
-        stop.preventDefault(); // отменяет стандартное поведения ссылки якоря и страница не поднимается вверх
-        const r = Math.floor(Math.random() * 256);
-        const g = Math.floor(Math.random() * 256);
-        const b = Math.floor(Math.random() * 256);
-        backColorEl.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-
-    });
-  }
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    backColorEl.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+}
