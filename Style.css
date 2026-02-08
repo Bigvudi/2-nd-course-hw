@@ -31,10 +31,10 @@ button {
 
 .image-bigstar {
     position: absolute;
-    margin-top: -325px;
-    right: -365px;
-    width: 749px;
-    height: 791px;
+    margin-top: -329px;
+    right: -550px;
+    width: 1035px;
+    height: 915px;
 }
 
 .image-mobile {
@@ -51,40 +51,40 @@ button {
 
 .image-smallstar2 {
     position: absolute;
-    bottom: 149px;
-    right: 344px;
+    bottom: 150px;
+    right: 297px;
 }
 
 .image-ministar {
     width: 35px;
     height: 35px;
     position: absolute;
-    top: 60px;
-    left: 96px;
+    top: 69px;
+    left: 113px;
 }
 
 .image-ministar2 {
     position: absolute;
-    bottom: 255px;
-    right: 455px;
+    bottom: 226px;
+    right: 410px;
 }
 
 .image-line1 {
     position: absolute;
-    right: 200px;
-    top: -50px;
+    right: 223px;
+    top: -11px;
 }
 
 .image-line2 {
     position: absolute;
-    right: 160px;
-    top: 150px;
+    right: 183px;
+    top: 254px;
 }
 
 .image-line3{
     position: absolute;
-    right: -35px;
-    top: 330px;
+    right: -52px;
+    top: 378px;
 }
 
 .image-line4 {
@@ -95,9 +95,11 @@ button {
 
 .image-form {
     position: absolute;
-    right: 70px;
-    bottom: 200px;
+    right: 67px;
+    bottom: 206px;
 }
+
+
 
 .Fon-page__main {
     display: flex;
@@ -156,20 +158,35 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(50px);
     background: rgba(188, 236, 48, 1);
+    display: flex;
     overflow: hidden;
+    white-space: nowrap; 
 }
+
 
 .Footer-list {
     display: flex;
-    width: 100%;
-    align-items: center;
     justify-content: flex-start;
-    white-space: nowrap;
     gap: 51px;
     height: 90px;
     list-style: none;
     padding: 0;
+    align-items: center;
+    white-space: nowrap; 
+    flex-shrink: 0; /* Важно: чтобы списки не сжимались */
+    padding-right: 51px; 
+    animation: scroll-left 20s linear infinite;
+
 }
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
 
 .Footer-list-item {
     font-size: 30px;
@@ -190,20 +207,20 @@ button {
 
 .smile-bigstar {
     position: absolute;
-    top: 70px;
-    right: -140px;
+    top: 74px;
+    right: -189px;
 }
 
 .smile-smallstar {
     position: absolute;
-    top: 825px;
-    left: 40px;
+    top: 821px;
+    left: -4px;
 }
 
 .smile-ministar {
     position: absolute;
     top: 770px;
-    left: 25px;
+    left: -16px;
 }
 
 .mini-games {
@@ -562,31 +579,31 @@ button {
 
 .game-section__ministar1 {
     position: absolute;
-    top: 93px;
-    right: 124px;
+    top: 92px;
+    right: 78px;
 }
 
 .game-section__smallstar1 {
     position: absolute;
     top: 126px;
-    right: 44px;
+    right: 0px;
 }
 
 .game-section__ministar2 {
     position: absolute;
     bottom: 45px;
-    right: 150px;
+    right: 104px;
 }
 
 .game-section__smallstar2 {
     position: absolute;
     bottom: 65px;
-    right: 52px;
+    right: 7px;
 }
 
 
 .memory-game {
-    gap: 36px;
+    gap: 32px;
     display: flex;
     flex-direction: column;
 }
@@ -767,6 +784,8 @@ button {
         width: 57px;
     }
 
+ 
+
     .Fon-page__main {
         align-items: center;
     }
@@ -882,7 +901,7 @@ button {
     .Fon-page__main {
         align-items: center;
         padding-top: 147px;
-        padding-bottom: 306px;
+        padding-bottom: 131px;
     }
 
     .image-line1, .image-line2, 
@@ -894,8 +913,8 @@ button {
     .image-mobile {
         display: inline-block;
         position: absolute;
-        left: 55vw;
-        top: -115px;
+        left: 50vw;
+        top: -103px;
     }
     
     .image-ministar {
@@ -937,8 +956,8 @@ button {
     }
 
     .Fon-page__subtitle {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 24px;
+        padding-right: 24px;
         font-size: 16px;
         line-height: 20px;
         text-align: center;
@@ -1018,12 +1037,12 @@ button {
     }
 
     .image__icon {
-        width: 373px;
+        width: 100%;
         height: 285px;
     }
 
     .riddle {
-        padding: 29px;
+        padding: 24px 29px 32px 29px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -1044,6 +1063,7 @@ button {
     .riddle-play {
         width: 100%;
         height: 55px;
+        font-size: 16px;
     }
 
     .footer-end {
