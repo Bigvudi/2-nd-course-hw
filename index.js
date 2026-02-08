@@ -139,7 +139,7 @@ function playHand() {
 
     // Игра6
     // Генератор цветов
-    function randonBackground () {
+    function randomBackground () {
     const backColorEl = document.querySelector('#randomcolor');
     backColorEl.addEventListener('click', (stop) => {
         stop.preventDefault(); // отменяет стандартное поведения ссылки якоря и страница не поднимается вверх
@@ -149,4 +149,4 @@ function playHand() {
         backColorEl.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 
     });
-
+  }
