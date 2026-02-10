@@ -139,10 +139,31 @@ function playHand() {
 
     // Игра6
     // Генератор цветов
+// function randomBackground() {
+//     const backColorEl = document.getElementById('randomcolor');
+//     const r = Math.floor(Math.random() * 256);
+//     const g = Math.floor(Math.random() * 256);
+//     const b = Math.floor(Math.random() * 256);
+     
+//     backColorEl.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+//     // const button = document.getElementById('colorBtn');
+//     // button.addEventListener('click', randomBackground);
+// }
+
 function randomBackground() {
-    const backColorEl = document.querySelector('#randomcolor');
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
-    backColorEl.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-}
+    const color = `rgb(${r}, ${g}, ${b})`;
+    
+    // Меняем фон у всех основных контейнеров
+    document.body.style.backgroundColor = color;
+    
+    // Добавьте селекторы ваших основных секций
+    const sections = document.querySelectorAll('section, .Fon-page, .About-games, .game-section, .memory-game');
+    sections.forEach(section => {
+        section.style.backgroundColor = 'transparent';
+        section.style.background = 'none';
+    });
+}   
+            

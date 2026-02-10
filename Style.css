@@ -756,6 +756,43 @@ button {
     padding-bottom: 60px;
 }
 
+@media (min-width: 1025px) and (max-width:1200px) {
+    .center {
+        padding-left: 20px;
+        padding-right: 20px;
+    }   
+
+    .games-item {
+        justify-content: space-around;
+        row-gap: 32px;
+    }
+
+    .games-cards {
+        flex-direction: row;
+    }
+
+    .games-card1, .games-card2, .games-card3,
+    .games-card4, .games-card5, .games-card6 {
+        width: 375px;
+        height: 475px;
+    }
+
+    .game1, .game2, .game3,
+    .game4, .game5, .game6 {
+        gap: 0;
+    }
+
+    .game1, .game3{
+        bottom: 80px;
+    }
+    .game2, .game5 {
+        bottom: 40px;
+    }
+     .game4, .game6 {
+        bottom: 3px;
+    }
+}
+
 
 
 @media (min-width: 768px) and (max-width:1024px){
