@@ -2,7 +2,7 @@ function guessNumber() {
   let rand = Math.floor(Math.random() * 101);
   let input = prompt("Угадайте число от 0 до 100:");
 
-  // Проверка на отмену при первом вводе
+
   if (input === null) return;
 
   let nam = +input;
@@ -106,13 +106,13 @@ function puzzle() {
 // игра5
 
 function playHand() {
-    // 1. Запрашиваем ввод
+
     let userHand = prompt("Введите камень, ножницы или бумага");
     const a = "камень";
     const b = "ножницы";
     const c = "бумага";
 
-    if (userHand === null) return; //проверка на отмену
+    if (userHand === null) return; 
 
     userHand = userHand.toLowerCase();
 
@@ -139,16 +139,7 @@ function playHand() {
 
     // Игра6
     // Генератор цветов
-// function randomBackground() {
-//     const backColorEl = document.getElementById('randomcolor');
-//     const r = Math.floor(Math.random() * 256);
-//     const g = Math.floor(Math.random() * 256);
-//     const b = Math.floor(Math.random() * 256);
-     
-//     backColorEl.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-//     // const button = document.getElementById('colorBtn');
-//     // button.addEventListener('click', randomBackground);
-// }
+
 
 function randomBackground() {
     const r = Math.floor(Math.random() * 256);
@@ -156,10 +147,8 @@ function randomBackground() {
     const b = Math.floor(Math.random() * 256);
     const color = `rgb(${r}, ${g}, ${b})`;
     
-    // Меняем фон у всех основных контейнеров
     document.body.style.backgroundColor = color;
     
-    // Добавьте селекторы ваших основных секций
     const sections = document.querySelectorAll('section, .Fon-page, .About-games, .game-section, .memory-game');
     sections.forEach(section => {
         section.style.backgroundColor = 'transparent';
